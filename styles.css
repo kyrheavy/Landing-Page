@@ -13,6 +13,7 @@
     display: block;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -21,7 +22,7 @@ html {
     font-family: 'Roboto';
 }
 
-title, script{
+title, script, style{
     display: none;
 }
 
@@ -77,7 +78,6 @@ body {
 .container{
     width: 100%;
     height: auto;
-    
     display: flex;
     padding: 3rem 4rem;
     background-color: var(--dark-bg-color);
@@ -86,7 +86,7 @@ body {
 
 .text-left{
     margin-left: 10%;
-    margin-top: 50px;
+    margin-top: 30px;
     height: 200px;
     width: 50%;
     margin-right: 50px;
@@ -98,23 +98,28 @@ p.small-description{
 }
 
 .description-image{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 30px;
     height: 200px;
     width: 50%;
-    overflow: hidden;
-    scale: auto;
 }
 
 img{
-    width: 400px;
-    height: 200px;
+    width: 700px;
+    height: auto;
     background-color: grey;
     color: var(--header-logo-text);
-    text-align:center;
+    box-shadow: 5px 5px 10px var(--button-color);
+    border-radius: 15px;
+    border: 2px solid var(--light-text-color);
 }
 
-
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 h1{
     font-size: 48px;
@@ -151,9 +156,11 @@ p.small-description{
     height: 400px;
 }
 
+
 h2{
     color: var(--dark-bg-color);
     padding: 30px 0;
+    text-shadow: 1px 1px 2px var(--button-color);
 }
 
 ul.boxes{
@@ -172,12 +179,19 @@ li.box-container{
     padding: 0 10px;
 }
 
+i{
+    font-size: 110px;
+    text-align: center;
+    color: var(--button-color);
+}
+
+
 .box{
     margin: auto;
     width: 120px;
     height: 120px;
     border-radius: 7px;
-    border: 3.5px solid var(--button-color);
+    border: 3.5px solid none;
 }
 
 .boxes-text{
@@ -196,8 +210,13 @@ li.box-container{
 }
 
 .quote{
-margin: auto;
-padding: 0 120px;
+    margin: auto;
+    padding: 0 100px;
+}
+
+i.quote{
+    font-size: 50px;
+    color: var(--button-color);
 }
 
 blockquote{
@@ -206,13 +225,17 @@ blockquote{
     font-style: italic;
     font-weight: 100;
     color: var(--dark-bg-color);
+    margin: 0 60px;
 }
 
 footer.quoted-person{
     background: none;
     text-align: right;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: bolder;
+    font-size: 36px;
+    color: var(--button-color);
+    margin: 50px 120px 0 0;
+    font-family:'Times New Roman', Times, serif ;
 }
 
 .action{
@@ -237,7 +260,7 @@ button.newsletter-button{
     text-decoration: none;
     border-radius: 7px;
     border: 1.5px solid var(--light-text-color);
-    padding: 3px 20px;
+    padding: 3px 10px;
     color: var(--light-text-color);
     font-size: 18px;
     position: relative;
